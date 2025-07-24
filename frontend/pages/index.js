@@ -141,7 +141,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <div className="mb-6">
             <img 
-              src="/logo.png" 
+              src="/logo_VMA.png" 
               alt="VMA Prediction System Logo" 
               className="w-20 h-20 mx-auto mb-4"
             />
@@ -237,7 +237,7 @@ export default function Home() {
               {/* Gradation Features */}
               <div>
                 <h3 className="text-lg font-semibold text-gray-700 mb-4">Gradation (% Passing)</h3>
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {[
                     { key: 'PASS_19', label: '19mm Sieve (%)', min: 90, max: 100 },
                     { key: 'PASS_12_5', label: '12.5mm Sieve (%)', min: 70, max: 95 },
@@ -250,20 +250,31 @@ export default function Home() {
                     { key: 'PASS_0_15', label: '0.15mm Sieve (%)', min: 3, max: 12 },
                     { key: 'PASS_0_075', label: '0.075mm Sieve (%)', min: 2, max: 8 },
                   ].map(({ key, label, min, max }) => (
-                    <div key={key}>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <div key={key} className="space-y-2">
+                      <label className="block text-sm font-medium text-gray-700">
                         {label}
                       </label>
-                      <input
-                        type="range"
-                        value={formData[key]}
-                        onChange={(e) => handleInputChange(key, e.target.value)}
-                        min={min}
-                        max={max}
-                        step="0.1"
-                        className="w-full"
-                      />
-                      <span className="text-sm text-gray-600">{formData[key]}%</span>
+                      <div className="flex items-center space-x-3">
+                        <input
+                          type="number"
+                          value={formData[key]}
+                          onChange={(e) => handleInputChange(key, e.target.value)}
+                          min={min}
+                          max={max}
+                          step="0.1"
+                          className="w-20 px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                        />
+                        <span className="text-sm text-gray-600">%</span>
+                        <input
+                          type="range"
+                          value={formData[key]}
+                          onChange={(e) => handleInputChange(key, e.target.value)}
+                          min={min}
+                          max={max}
+                          step="0.1"
+                          className="flex-1"
+                        />
+                      </div>
                     </div>
                   ))}
                 </div>
