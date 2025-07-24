@@ -1,0 +1,5 @@
+# This file ensures the models directory is tracked by git
+# Copy your model files here:
+# - extratrees_model.pkl
+# - extratrees_scaler.pkl
+# - extratrees_model_info.pkl 
