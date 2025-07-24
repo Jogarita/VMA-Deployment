@@ -140,11 +140,13 @@ export default function Home() {
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <div className="mb-6">
-            <img 
-              src="/logo_VMA.png" 
-              alt="VMA Prediction System Logo" 
-              className="w-20 h-20 mx-auto mb-4"
-            />
+            <div className="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-full p-4 mx-auto w-32 h-32 flex items-center justify-center shadow-lg">
+              <img 
+                src="/logo_VMA.png" 
+                alt="VMA Prediction System Logo" 
+                className="w-24 h-24"
+              />
+            </div>
           </div>
           <h1 className="text-4xl font-bold mb-2">VMA Prediction System</h1>
           <p className="text-xl opacity-90">ExtraTrees Approach 3 Model - Advanced Asphalt Mix Design Analysis</p>
